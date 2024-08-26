@@ -4,6 +4,7 @@ export default defineConfig({
   rules: [["m-1", { margin: "1px" }]],
   shortcuts: {
     "sub-text-color": "c-#ccc",
+    "flex-center": "flex justify-center items-center"
   },
   theme: {},
 });

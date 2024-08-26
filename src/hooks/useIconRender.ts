@@ -8,7 +8,7 @@ interface IconConfig {
   localIcon: string;
 }
 
-interface LocalStyle extends Partial<Pick<IconConfig, "color" | "fontSize">> {}
+interface LocalStyle extends Partial<Pick<IconConfig, "color" | "fontSize">> { }
 
 export function useIconRender() {
   function iconRender(config: Partial<IconConfig>) {

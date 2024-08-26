@@ -6,13 +6,11 @@
 <template>
   <login-contain>
     <div class="w-80 h-100 bg-#fff rounded-1 shadow">
-      <div class="flex justify-center py-8 text-4 sub-text-color">
-        <div>扫码登录</div>
+      <div class="flex justify-center py-8 text-5 sub-text-color">
         <div class="mx-5 c-#000 font-bold">账号登录</div>
-        <div>第三方登录</div>
       </div>
 
-      <div class="flex justify-center flex-col items-center">
+      <div class="flex justify-center flex-col items-center mb-8">
         <n-form ref="formRef" :model="formInfo" :rules="Rules" class="w-90%" :show-label="false">
           <n-form-item path="account">
             <n-input v-model:value="formInfo.account" @keydown.enter.prevent placeholder="账号">
@@ -36,7 +34,11 @@
         </n-form>
 
         <n-button type="primary" class="w-90%" round> 登录 </n-button>
+
       </div>
+
+      <third-party/>
+
     </div>
   </login-contain>
 </template>
@@ -45,6 +47,7 @@
 import { ref } from 'vue'
 import { LoginContain } from './components/layout'
 import { Rules } from './constant'
+import {ThirdParty} from './businessComponents'
 const formInfo = ref({
   account: '22',
   password: '',

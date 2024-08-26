@@ -30,16 +30,16 @@ const props = defineProps({
     default: false,
   },
 });
+
 const icon = computed(() => {
   const def = {
     color: props.color,
     fontSize: props.fontSize,
   };
   return props.isLocal
-    ? iconRender({ localIcon: props.icon })
+    ? iconRender({ localIcon: props.icon ,...def })
     : iconRender({ icon: props.icon, ...def });
 });
-console.log("icon");
 </script>
 
 <style scoped></style>

@@ -27,6 +27,7 @@ const bindAttrs = computed(() => ({
   class: attrs.class,
   style: attrs.style,
 }));
+console.log('bindAttrs' , bindAttrs.value)
 const props = defineProps({
   icon: {
     type: String,
@@ -38,17 +39,19 @@ const props = defineProps({
   },
 });
 
-const renderLocalIcon = computed(() => !!props.localIcon);
-console.log("icon222", props.icon);
+const renderLocalIcon = computed(() =>{
+  return  !!props.localIcon
+});
+
 const symbolId = computed(() => {
   const { VITE_ICON_LOCAL_PREFIX: prefix } = import.meta.env;
 
   const defaultLocalIcon = "no-icon";
 
   const icon = props.localIcon || defaultLocalIcon;
-
   return `#${prefix}-${icon}`;
 });
+
 </script>
 
 <style scoped></style>

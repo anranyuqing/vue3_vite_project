@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import autofit from 'autofit.js'
-import { onMounted, ref } from 'vue'
-import { darkTheme } from 'naive-ui'
+import { onMounted, ref , Ref} from 'vue'
+import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
+const themeOverrides:Ref<GlobalThemeOverrides> = ref({
+  common: {
+    primaryColor: '#3975c6',
+    primaryColorHover:'#3975c6'
+  }
+})
 
-const theme = ref(null)
 onMounted(() => {
   autofit.init({
     dh: 1080,
@@ -15,7 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <n-config-provider :theme="theme" class="h-full">
+  <n-config-provider :theme-overrides="themeOverrides" class="h-full">
     <router-view />
   </n-config-provider>
 </template>
