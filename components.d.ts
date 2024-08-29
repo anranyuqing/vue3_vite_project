@@ -7,13 +7,22 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AdminLayout: typeof import('./src/layouts/AdminLayout/AdminLayout.vue')['default']
+    AppLoading: typeof import('./src/components/AppLoading/AppLoading.vue')['default']
+    BasicContain: typeof import('./src/components/BasicContain/BasicContain.vue')['default']
+    BasicLayout: typeof import('./src/layouts/BasicLayout/BasicLayout.vue')['default']
     CsIcon: typeof import('./src/components/CsIcon/CsIcon.vue')['default']
     CsTable: typeof import('./src/components/CsTable/index.vue')['default']
+    LayoutAside: typeof import('./src/layouts/components/LayoutAside.vue')['default']
+    LayoutHeader: typeof import('./src/layouts/components/LayoutHeader.vue')['default']
+    MessageContent: typeof import('./src/components/MessageContent/MessageContent.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']
     NInput: typeof import('naive-ui')['NInput']
+    NMenu: typeof import('naive-ui')['NMenu']
+    NSpin: typeof import('naive-ui')['NSpin']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./src/components/SvgIcon/index.vue')['default']

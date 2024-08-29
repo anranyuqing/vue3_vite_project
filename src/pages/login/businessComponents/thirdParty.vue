@@ -5,8 +5,8 @@
 -->
 <template>
   <div class="w-full flex-center">
-    <cs-icon icon="qq"  isLocal  class="mr-4" :fontSize="32"/>
-    <cs-icon icon="wechart"  isLocal :fontSize="32" />
+    <cs-icon icon="qq"  isLocal  class="mr-4 cursor-pointer" :fontSize="32"/>
+    <cs-icon icon="wechart" class="cursor-pointer"  isLocal :fontSize="32" />
   </div> 
 </template>
 

@@ -4,7 +4,7 @@
  * LayoutHeader.vue
 -->
 <template>
-  <div class="w-full h-20 bg-yellow"></div>
+  <div class="w-full h-20 bg-blue"></div>
 </template>
 
 <script setup lang="ts"></script>

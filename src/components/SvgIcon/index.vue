@@ -4,54 +4,46 @@
  * SvgIcon.vue
 -->
 <template>
-  <svg
-    aria-hidden="true"
-    width="1em"
-    height="1em"
-    v-bind="bindAttrs"
-    v-if="renderLocalIcon"
-  >
+  <svg aria-hidden="true" width="1em" height="1em" v-bind="bindAttrs" v-if="renderLocalIcon">
     <use :xlink:href="symbolId" fill="currentColor" />
   </svg>
   <Icon :icon="icon" v-bind="bindAttrs" v-else />
 </template>
 
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
+import { Icon } from '@iconify/vue'
 
-import { computed, ref, useAttrs } from "vue";
+import { computed, ref, useAttrs } from 'vue'
 
-const attrs = useAttrs();
+const attrs = useAttrs()
 
 const bindAttrs = computed(() => ({
   class: attrs.class,
-  style: attrs.style,
-}));
-console.log('bindAttrs' , bindAttrs.value)
+  style: attrs.style
+}))
 const props = defineProps({
   icon: {
     type: String,
-    default: "",
+    default: ''
   },
   localIcon: {
     type: String,
-    default: "",
-  },
-});
+    default: ''
+  }
+})
 
-const renderLocalIcon = computed(() =>{
-  return  !!props.localIcon
-});
+const renderLocalIcon = computed(() => {
+  return !!props.localIcon
+})
 
 const symbolId = computed(() => {
-  const { VITE_ICON_LOCAL_PREFIX: prefix } = import.meta.env;
+  const { VITE_ICON_LOCAL_PREFIX: prefix } = import.meta.env
 
-  const defaultLocalIcon = "no-icon";
+  const defaultLocalIcon = 'no-icon'
 
-  const icon = props.localIcon || defaultLocalIcon;
-  return `#${prefix}-${icon}`;
-});
-
+  const icon = props.localIcon || defaultLocalIcon
+  return `#${prefix}-${icon}`
+})
 </script>
 
 <style scoped></style>

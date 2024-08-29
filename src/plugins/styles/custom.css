@@ -1,7 +1,9 @@
 :root {
-  --cs-color-primary: #3975c6
+  --cs-color-primary: #3975c6;
+  --cs-color-bg-0: #F2F3F7
 }
 
 .dark {
-  --cs-color-primary: #3975c6
+  --cs-color-primary: #3975c6;
+  --cs-color-bg-0: #1f222e
 }

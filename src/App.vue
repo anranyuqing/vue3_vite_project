@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import autofit from 'autofit.js'
-import { onMounted, ref , Ref} from 'vue'
+import { onMounted, ref, Ref } from 'vue'
 import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
-const themeOverrides:Ref<GlobalThemeOverrides> = ref({
+const themeOverrides: Ref<GlobalThemeOverrides> = ref({
   common: {
     primaryColor: '#3975c6',
-    primaryColorHover:'#3975c6'
+    primaryColorHover: '#3975c6'
   }
 })
 

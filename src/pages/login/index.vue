@@ -33,26 +33,42 @@
           </n-form-item>
         </n-form>
 
-        <n-button type="primary" class="w-90%" round> 登录 </n-button>
-
+        <n-button type="primary" class="w-90%" round @click="handleLogin"> 登录 </n-button>
       </div>
 
-      <third-party/>
-
+      <third-party />
     </div>
   </login-contain>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { LoginContain } from './components/layout'
 import { Rules } from './constant'
-import {ThirdParty} from './businessComponents'
+import { ThirdParty } from './businessComponents'
+import { login } from '@/server'
+import { setToken } from '@/utils/auth'
+const router = useRouter()
 const formInfo = ref({
-  account: '22',
+  account: '',
   password: '',
   code: ''
 })
+
+/**
+ *action:登录
+ *description:~~
+ */
+async function handleLogin() {
+  try {
+    const res = await login(formInfo.value)
+    setToken(res.data.token)
+    router.push('/')
+  } catch (err) {
+    console.error('err')
+  }
+}
 </script>
 
 <style scoped></style>

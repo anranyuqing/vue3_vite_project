@@ -17,7 +17,7 @@ export function unplugin(viteEnv) {
         vue(),
         Unocss(),
         Components({
-            dirs: ['src/components'],
+            dirs: ['src/components', 'src/layouts'],
             resolvers: [NaiveUiResolver(), IconsResolver({
                 customCollections: [collectionName],
                 componentPrefix: VITE_ICON_PREFIX

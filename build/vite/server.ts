@@ -1,6 +1,15 @@
-export function server() { 
-    return  {
+export function server() {
+  return {
     port: 80,
-    open: true
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8888',
+        rewrite: (path) => {
+          console.log('path', path)
+          return path.replace(/^\/api/, '')
+        },
+      }
+    }
   }
 }
