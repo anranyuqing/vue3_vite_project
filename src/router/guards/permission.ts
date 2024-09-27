@@ -5,6 +5,7 @@ export function createPermissionGuard(
   from: RouteLocationNormalized,
   next: NavigationGuardNext,
 ) {
+
   const isLogin = getToken();
   if (!isLogin) {
     if (!to.meta.isAuth) {

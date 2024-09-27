@@ -11,6 +11,7 @@
   "dependencies": {
     "autofit.js": "^3.1.0",
     "axios": "^1.7.5",
+    "naive-ui": "^2.40.1",
     "pdf.js": "^0.1.0",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0"
@@ -23,7 +24,6 @@
     "@unocss/preset-uno": "^0.61.3",
     "@unocss/reset": "^0.61.3",
     "@vitejs/plugin-vue": "^5.0.5",
-    "naive-ui": "^2.39.0",
     "prettier": "^3.3.3",
     "typescript": "^5.2.2",
     "unocss": "^0.61.3",

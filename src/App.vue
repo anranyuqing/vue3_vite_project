@@ -8,7 +8,6 @@ const themeOverrides: Ref<GlobalThemeOverrides> = ref({
     primaryColorHover: '#3975c6'
   }
 })
-
 onMounted(() => {
   autofit.init({
     dh: 1080,

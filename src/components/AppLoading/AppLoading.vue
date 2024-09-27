@@ -1,4 +1,3 @@
-
 <template>
   <div class="w-100 h-100 bg-red">加载中...</div>
 </template>
@@ -7,5 +6,4 @@
 console.log('-----')
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
