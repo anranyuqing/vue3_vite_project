@@ -1,14 +1,9 @@
-import axios, { InternalAxiosRequestConfig } from 'axios'
+import { setupInterceptors } from './interceptors'
+import axios from 'axios'
 const http = axios.create({
-    baseURL: import.meta.env.VITE_APP_BASE_URL,
-    timeout: 10000,
+  baseURL: import.meta.env.VITE_APP_BASE_URL,
+  timeout: 10000
 })
 
-http.interceptors.request.use((
-    config: InternalAxiosRequestConfig
-) => {
-    console.log('config', config)
-    return config
-})
-
+setupInterceptors(http)
 export default http

@@ -1,4 +1,5 @@
 interface Window {
-    $message: any,
-    $dialog: any
+  $message: import('naive-ui').MessageProviderInst
+  $dialog: import('naive-ui').DialogProviderInst
+  $notification: import('naive-ui').NotificationProviderInst
 }

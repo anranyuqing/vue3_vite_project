@@ -6,7 +6,6 @@ export function server() {
       '/api': {
         target: 'http://localhost:8888',
         rewrite: (path) => {
-          console.log('path', path)
           return path.replace(/^\/api/, '')
         },
       }

@@ -5,7 +5,7 @@ export default defineConfig({
   shortcuts: {
     "sub-text-color": "c-#ccc",
     "flex-center": "flex justify-center items-center",
-
+    "fix-center":"fixed w-full h-full flex-center"
   },
   theme: {
     colors: {

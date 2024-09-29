@@ -1,9 +1,9 @@
 <template>
-  <div class="w-100 h-100 bg-red">加载中...</div>
+  <div class="fix-center "> <n-spin  show/></div>
 </template>
 
 <script setup lang="ts">
-console.log('-----')
+import { onUnmounted } from "vue"
 </script>
 
 <style scoped></style>

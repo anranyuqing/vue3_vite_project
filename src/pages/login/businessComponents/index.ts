@@ -1,1 +1,0 @@
-export { default as ThirdParty} from './thirdParty.vue'

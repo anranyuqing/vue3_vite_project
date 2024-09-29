@@ -15,11 +15,9 @@ export function createPermissionGuard(
       next({ name: "login", query: { redirect } });
     }
   } else {
-    console.log('path', to.path)
     if (to.path !== '/login') {
       next();
     } else {
-      console.log('重定向')
 
       next({ path: "/" });
     }

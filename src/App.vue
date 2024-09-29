@@ -2,6 +2,8 @@
 import autofit from 'autofit.js'
 import { onMounted, ref, Ref } from 'vue'
 import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
+import { AppProvider } from '@/components/Application'
+
 const themeOverrides: Ref<GlobalThemeOverrides> = ref({
   common: {
     primaryColor: '#3975c6',
@@ -20,7 +22,9 @@ onMounted(() => {
 
 <template>
   <n-config-provider :theme-overrides="themeOverrides" class="h-full">
-    <router-view />
+    <app-provider>
+      <router-view />
+    </app-provider>
   </n-config-provider>
 </template>
 

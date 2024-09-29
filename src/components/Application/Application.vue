@@ -6,13 +6,17 @@
 <template>
   <n-dialog-provider>
     <dialog-content />
-    <n-message-provider>
-      <message-content />
-      <slot />
-    </n-message-provider>
+    <n-notification-provider>
+      <notification-content/>
+      <n-message-provider>
+        <message-content />
+        <slot />
+      </n-message-provider>
+    </n-notification-provider>
   </n-dialog-provider>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style scoped></style>

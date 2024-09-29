@@ -1,3 +1,20 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "vue.volar",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "mikestead.dotenv",
+    "maggie.eslint-rules-zh-plugin",
+    "wix.vscode-import-cost",
+    "kisstkondoros.vscode-gutter-preview",
+    "equinusocio.vsc-material-theme-icons",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.powershell",
+    "antfu.unocss",
+    "wmaurer.change-case",
+    "sdras.vue-vscode-snippets"
+  ]
 }
