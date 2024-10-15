@@ -1,12 +1,13 @@
 {
   "name": "my-vue-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "autofit.js": "^3.1.0",
@@ -24,6 +25,7 @@
     "@unocss/preset-uno": "^0.61.3",
     "@unocss/reset": "^0.61.3",
     "@vitejs/plugin-vue": "^5.0.5",
+    "conventional-changelog-cli": "^5.0.0",
     "echarts": "^5.5.1",
     "prettier": "^3.3.3",
     "typescript": "^5.2.2",
