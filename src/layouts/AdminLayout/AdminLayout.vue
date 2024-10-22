@@ -1,4 +1,3 @@
-
 <template>
   <div class="h-full flex flex-col">
     <div class="min-h-20"><slot name="header" /></div>
@@ -12,8 +11,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
-<style scoped>
-</style>
+<style scoped></style>

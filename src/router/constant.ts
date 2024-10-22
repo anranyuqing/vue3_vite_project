@@ -1,4 +1,5 @@
 import BlankLayout from '@/layouts/BlankLayout/BlankLayout'
+import BasicLayout from '@/layouts/BasicLayout/BasicLayout'
 
 export const rootRoute: AuthRoute.Route = {
   name: "root",
@@ -11,25 +12,25 @@ export const rootRoute: AuthRoute.Route = {
 };
 
 export const homeRoute: AuthRoute.Route = {
-  name: "Home",
-  path: "/home",
-  component: BlankLayout,
+  name: 'Home',
+  path: '/home',
+  component: BasicLayout,
   meta: {
-    title: "首页",
-    isAuth: true,
+    title: '首页',
+    isAuth: true
   },
   children: [
     {
-      name: "Dashboard",
-      path: "",
+      name: 'Dashboard',
+      path: '',
       component: () => import('@/pages/home/index'),
       meta: {
-        title: "首页",
-        isAuth: true,
+        title: '首页',
+        isAuth: true
       }
     }
-  ],
-};
+  ]
+}
 
 const otherRoute = [
   {

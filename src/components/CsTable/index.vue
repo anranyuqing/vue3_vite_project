@@ -1,5 +1,5 @@
 <template>
-  <div>CsTable</div>
+  
 </template>
 
 <script>
