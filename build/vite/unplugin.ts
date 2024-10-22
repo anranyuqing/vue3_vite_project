@@ -1,7 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import { NaiveUiResolver ,AntDesignVueResolver} from 'unplugin-vue-components/resolvers'
 import Icons from "unplugin-icons/vite";
 import IconsResolver from 'unplugin-icons/resolver'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
@@ -18,7 +18,7 @@ export function unplugin(viteEnv) {
         Unocss(),
         Components({
             dirs: ['src/components', 'src/layouts'],
-            resolvers: [NaiveUiResolver(), IconsResolver({
+            resolvers: [NaiveUiResolver(),AntDesignVueResolver(), IconsResolver({
                 customCollections: [collectionName],
                 componentPrefix: VITE_ICON_PREFIX
             })]

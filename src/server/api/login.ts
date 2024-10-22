@@ -1,5 +1,5 @@
-import { creatData } from '../http'
+import { creat } from '../http'
 
-export function login(params: Admin.login) {
-    return creatData('/login', params)
+export function login(params: any) {
+    return creat('/login', params)
 }
