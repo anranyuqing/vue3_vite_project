@@ -7,3 +7,7 @@ export function login(params: any) {
 export function getPermissionInfo(params: any) {
   return query('auth/permissionInfo', params)
 }
+
+export function getQrcode(params: any) {
+  return query('auth/qrcode', params)
+}
