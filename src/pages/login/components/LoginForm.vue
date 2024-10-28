@@ -34,9 +34,15 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { Rules } from '../constant'
-import { login } from '@/server'
 import { setToken } from '@/utils/auth'
+import { useAuthStore } from '@/store'
+import { useRouterTo } from '@/hooks'
+
+const { login } = useAuthStore()
+const { toHome } = useRouterTo()
+
 const router = useRouter()
+const formRef = ref()
 const formInfo = ref({
   account: '',
   password: '',
@@ -48,29 +54,13 @@ const formInfo = ref({
  *description:~~
  */
 async function handleLogin() {
-  try {
-    const res = await login(formInfo.value)
-    let message = res.data.message
+  //表单校验
+  await formRef.value.validate()
 
-    if (res.data.code !== '200') {
-      window.$notification.error({
-        title: '登录失败',
-        content: message,
-        duration:2000
-      })
-      return
-    }
+  const loginRes = await login(formInfo.value)
 
-    window.$notification.create({
-      title: '登录成功',
-      content: '欢迎回来',
-       duration:2000
-    })
-
-    setToken(res.data.token)
-    router.push('/')
-  } catch (err) {
-    window.$message.error('网络连接不稳定？别着急，稍等片刻再试试！')
+  if (loginRes) {
+    toHome()
   }
 }
 </script>

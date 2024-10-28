@@ -1,13 +1,13 @@
 import { creat, query } from '../http'
 
-export function login(params: any) {
+export function loginApi(params: any): Promise<any> {
   return creat('auth/login', params)
 }
 
-export function getPermissionInfo(params: any) {
-  return query('auth/permissionInfo', params)
+export function getPermissionInfo() {
+  return query('auth/permissionInfo', {})
 }
 
-export function getQrcode(params: any) {
-  return query('auth/qrcode', params)
+export function getQrcode():Promise<any> {
+  return query('auth/qrcode', {})
 }

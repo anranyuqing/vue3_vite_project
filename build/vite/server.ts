@@ -1,5 +1,6 @@
 export function server() {
   return {
+    host:true,
     port: 80,
     open: true,
     proxy: {
