@@ -5,7 +5,7 @@
 -->
 <template>
   <div class="w-full h-100% ">
-    <div class="fixed right-60 top-50% translate-y--50%">
+    <div class="w-full">
       <slot />
     </div>
   </div>

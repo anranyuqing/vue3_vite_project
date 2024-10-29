@@ -5,7 +5,7 @@
 -->
 <template>
   <login-contain>
-    <div class="w-80 h-100 bg-#fff rounded-1 shadow relative">
+    <div class="w-100% h-100 bg-#fff rounded-1  relative">
       <div class="flex justify-center py-8 text-5 sub-text-color">
         <div class="mx-5 c-#000 font-bold">账号登录</div>
       </div>
