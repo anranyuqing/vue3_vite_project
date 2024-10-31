@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { to } from '@/utils'
 import { loginApi } from '@/server'
+import { setToken } from '@/utils/auth'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
@@ -17,6 +18,7 @@ export const useAuthStore = defineStore('auth', {
       }
       const { token } = res
       this.token = token
+      setToken(token)
       return true
     }
   }

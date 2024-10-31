@@ -20,6 +20,7 @@ declare module 'vue' {
     LayoutHeader: typeof import('./src/layouts/BasicLayout/components/LayoutHeader.vue')['default']
     MessageContent: typeof import('./src/components/MessageContent/MessageContent.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
+    NDataTable: typeof import('naive-ui')['NDataTable']
     NDialogProvider: typeof import('naive-ui')['NDialogProvider']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']

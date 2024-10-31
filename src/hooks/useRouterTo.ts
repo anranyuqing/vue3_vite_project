@@ -16,6 +16,7 @@ export function useRouterTo() {
     if (newTab === '_blank') {
       window.open(routerConf.href, '_blank')
     } else {
+      console.log('to' , to)
       router.push(to)
     }
   }
@@ -25,7 +26,7 @@ export function useRouterTo() {
    * @param newTab - 在新的浏览器标签打开
    */
   function toHome(newTab?: TabStatus) {
-    routerPush({ name: routerName('Home') }, newTab)
+    routerPush({ path: '/table' }, newTab)
   }
 
   /**

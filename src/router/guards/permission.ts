@@ -18,7 +18,6 @@ export function createPermissionGuard(
     if (to.path !== '/login') {
       next();
     } else {
-
       next({ path: "/" });
     }
   }

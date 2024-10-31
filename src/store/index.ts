@@ -3,7 +3,7 @@ import type { App } from 'vue'
 
 const store = createPinia()
 
-export function setupPinia(app: App) {
+export function setupStore(app: App) {
   app.use(store)
 }
 

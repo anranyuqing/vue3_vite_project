@@ -42,8 +42,13 @@ export const constantRoute = [
   rootRoute,
   homeRoute,
   {
-    name: "login",
-    path: "/login",
-    component: () => import("@/pages/login/index"),
+    name: 'login',
+    path: '/login',
+    component: () => import('@/pages/login/index')
   },
-];
+  {
+    name: 'table',
+    path: '/table',
+    component: () => import('@/pages/table/index')
+  }
+]
