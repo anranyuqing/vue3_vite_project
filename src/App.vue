@@ -12,8 +12,8 @@ const themeOverrides: Ref<GlobalThemeOverrides> = ref({
 })
 onMounted(() => {
   autofit.init({
-    dh: 667,
-    dw: 375,
+    dh: 1080,
+    dw: 1920,
     el: 'body',
     resize: true
   })

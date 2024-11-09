@@ -12,6 +12,7 @@
       <div class="flex-center flex-col">
         <login-form class="mb-4"/>
         <third-party class="absolute bottom-4"/>
+        <XhAiServer/>
       </div>
     </div>
   </login-contain>
@@ -20,6 +21,7 @@
 <script setup lang="ts">
 import { LoginForm, ThirdParty } from './components'
 import { LoginContain } from './layout'
+import {XhAiServer} from '@/businessComponents'
 </script>
 
 <style scoped></style>

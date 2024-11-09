@@ -16,6 +16,8 @@
     "ant-design-vue": "4.x",
     "autofit.js": "^3.1.0",
     "axios": "^1.7.5",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
     "naive-ui": "^2.40.1",
     "pdf.js": "^0.1.0",
     "pinia": "^2.2.4",
